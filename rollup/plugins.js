@@ -4,7 +4,7 @@ import { terser } from 'rollup-plugin-terser';
 import clear from 'rollup-plugin-clear';
 import { visualizer } from "rollup-plugin-visualizer";
 
-import { DIST_DIR, isDev, isNeedOpenStats } from './utils';
+import { DIST_DIR, APP_DIR, isDev, isNeedOpenStats } from './utils';
 
 export default [
   clear({
@@ -19,7 +19,7 @@ export default [
   !isDev ? terser() : null,
 
   html({
-    input: ['src/index.html'],
+    input: [`${APP_DIR}/index.html`],
     extractAssets: false,
     minify: !isDev,
   }),
