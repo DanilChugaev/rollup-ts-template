@@ -2,8 +2,9 @@ import typescript from '@rollup/plugin-typescript';
 import html from '@web/rollup-plugin-html';
 import { terser } from 'rollup-plugin-terser';
 import clear from 'rollup-plugin-clear';
+import { visualizer } from "rollup-plugin-visualizer";
 
-import { DIST_DIR, isDev } from './utils';
+import { DIST_DIR, isDev, isNeedOpenStats } from './utils';
 
 export default [
   clear({
@@ -21,5 +22,11 @@ export default [
     input: ['src/index.html'],
     extractAssets: false,
     minify: !isDev,
+  }),
+
+  visualizer({
+    title: 'Project dependency visualization',
+    template: 'sunburst',
+    open: isNeedOpenStats,
   }),
 ];
