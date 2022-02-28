@@ -1,12 +1,12 @@
-import Foo from './modules/Foo'
+import Foo from './modules/Foo';
 
 new Foo();
 
 (async () => {
   const module = await import('./modules/Dog')
     .then(m => m.default);
-
   const dog = new module;
+
   dog.bark();
 })();
 

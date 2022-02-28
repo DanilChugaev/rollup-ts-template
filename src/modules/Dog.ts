@@ -1,6 +1,9 @@
+/** dog */
 export default class Dog {
-  /** это пес */
-  public bark() {
+  /**
+   * bark
+   */
+  public bark(): void {
     console.log('woof woof');
     console.log('woof woof');
   }

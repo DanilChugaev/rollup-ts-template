@@ -1,9 +1,17 @@
+/**
+ * foo
+ */
 export default class Foo {
+  /**
+   * constructor
+   */
   constructor() {
-    console.log('foo test');   
+    console.log('foo test');
   }
-
-  public test() {
+  /**
+   * test
+   */
+  public test(): number {
     return 1;
   }
 }
