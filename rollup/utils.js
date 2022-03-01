@@ -1,5 +1,4 @@
 import { readdirSync } from 'fs';
-import path from 'path';
 
 /** Main app directory */
 export const APP_DIR = 'src';
@@ -15,5 +14,5 @@ export const isNeedOpenStats = !!process.argv.find(el => el === '--stats');
 
 /** Main entry files in app directory */
 export const files = readdirSync(APP_DIR)
-  .filter(el => path.extname(el) === '.ts')
+  .filter(el => el.endsWith('.ts') && !el.endsWith('.test.ts'))
   .map(el => `${APP_DIR}/${el}`);

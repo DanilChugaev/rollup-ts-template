@@ -15,11 +15,16 @@ module.exports = {
     '@typescript-eslint',
   ],
   ignorePatterns: [ 'dist/**' ],
-  globals: {},
+  globals: {
+    'describe': true,
+    'test': true,
+    'expect': true,
+  },
   rules: {
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/no-magic-numbers': 0,
     '@typescript-eslint/no-var-requires': 0,
+    'space-before-function-paren': 0,
     'object-property-newline': ['error', { 'allowAllPropertiesOnSameLine': true } ],
     'comma-dangle': ['error', {
       'arrays': 'always-multiline',

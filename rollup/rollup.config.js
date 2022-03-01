@@ -13,7 +13,7 @@ const output = {
   dir: DIST_DIR,
   format: 'esm',
   sourcemap: isDev,
-}
+};
 
 export default {
   input: [
@@ -21,4 +21,4 @@ export default {
   ],
   output,
   plugins,
-}
+};
