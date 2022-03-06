@@ -32,9 +32,9 @@ export default [
     minify: !isDev,
   }),
 
-  visualizer({
+  isNeedOpenStats ? visualizer({
     title: 'Project dependency visualization',
     template: 'sunburst',
-    open: isNeedOpenStats,
-  }),
+    open: true,
+  }) : null,
 ];
