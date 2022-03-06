@@ -5,6 +5,7 @@ import clear from 'rollup-plugin-clear';
 import { visualizer } from 'rollup-plugin-visualizer';
 import postcss from 'rollup-plugin-postcss';
 import consts from 'rollup-plugin-consts';
+import copy from 'rollup-plugin-copy';
 import autoprefixer from 'autoprefixer';
 
 import { DIST_DIR, APP_DIR, isDev, isNeedOpenStats } from './utils';
@@ -41,6 +42,16 @@ export default [
     input: [ `${APP_DIR}/index.html` ],
     extractAssets: false,
     minify: !isDev,
+  }),
+
+  /** copy files and folders */
+  copy({
+    targets: [
+      {
+        src: `${APP_DIR}/images/*`,
+        dest: `${DIST_DIR}/images`,
+      },
+    ],
   }),
 
   /** if need build statistics, start collecting it */
