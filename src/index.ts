@@ -1,5 +1,7 @@
 import Foo from './modules/Foo';
 
+import './index.styl';
+
 new Foo();
 
 (async () => {
