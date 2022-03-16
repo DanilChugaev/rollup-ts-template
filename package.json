@@ -16,6 +16,9 @@
     "stats": "rollup -c rollup/rollup.config.js --stats",
     "prepare": "husky install"
   },
+  "dependencies": {
+    "lit": "^2.2.1"
+  },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.3.0",
     "@types/jest": "^27.4.1",
@@ -32,6 +35,7 @@
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-consts": "^1.0.2",
     "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-visualizer": "^5.6.0",
