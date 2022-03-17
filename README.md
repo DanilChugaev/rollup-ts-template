@@ -1,6 +1,6 @@
 # rollup-ts-template
 
-A boilerplate code for typescript projects
+A boilerplate code for typescript projects. Build with webpack
 
 ## Contents
   - [Prerequisites](#prerequisites)
