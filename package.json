@@ -48,7 +48,7 @@
     "url": "git+https://github.com/DanilChugaev/rollup-ts-template.git"
   },
   "author": "danilchugaev",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/DanilChugaev/rollup-ts-template/issues"
   },
