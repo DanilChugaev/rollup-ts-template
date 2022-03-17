@@ -60,7 +60,7 @@ Install dependencies
 Start the development server
 
 ```bash
-  npm dev
+  npm run dev
 ```
 
 ## Build For Production
@@ -68,7 +68,7 @@ Start the development server
 To generate production build
 
 ```bash
- npm build
+ npm run build
 ```
 
 ## License
