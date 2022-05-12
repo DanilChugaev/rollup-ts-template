@@ -6,9 +6,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import postcss from 'rollup-plugin-postcss';
 import consts from 'rollup-plugin-consts';
 import copy from 'rollup-plugin-copy';
-import resolve from 'rollup-plugin-node-resolve';
 import autoprefixer from 'autoprefixer';
-
 
 import { DIST_DIR, APP_DIR, isDev, isNeedOpenStats } from './utils';
 
@@ -45,9 +43,6 @@ export default [
     extractAssets: false,
     minify: !isDev,
   }),
-
-  /** helps display custom html elements */
-  resolve(),
 
   /** copy files and folders */
   copy({
