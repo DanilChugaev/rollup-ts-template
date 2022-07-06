@@ -1,6 +1,8 @@
 import IS_DEV_MODE from 'consts:IS_DEV_MODE';
 
-import Foo from './modules/Foo';
+import join from 'lodash/join';
+
+import Foo from 'modules/Foo';
 
 if (IS_DEV_MODE) {
   console.log('is dev');
@@ -19,3 +21,9 @@ new Foo();
 })();
 
 console.log('test');
+
+window.addEventListener('DOMContentLoaded', () => {
+  const lodashElement = (document.querySelector('#lodash') as HTMLElement);
+
+  lodashElement.innerText = join(['Hello', 'super', 'world'], '~');
+});

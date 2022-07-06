@@ -16,9 +16,16 @@
     "stats": "rollup -c rollup/rollup.config.js --stats",
     "prepare": "husky install"
   },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.0",
     "@types/jest": "^27.4.1",
+    "@types/lodash": "^4.14.182",
     "@web/rollup-plugin-html": "^1.10.1",
     "autoprefixer": "^10.4.2",
     "browser-sync": "^2.27.7",
